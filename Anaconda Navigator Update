@@ -1,0 +1,13 @@
+#!/bin/sh
+# Created by LG8558//2024
+# A script to activate the native Conda shell and execute proprietary commands to update the Navigator app, package manager, and packages within
+
+# Activate shell in Anaconda
+. /opt/anaconda3/bin/activate 
+
+# Update package manager via shell
+echo | conda update -n base conda
+
+# Update Navigator and all packages from conda-forge repo via shell
+echo | conda update -n base anaconda-navigator
+echo | conda update --all
